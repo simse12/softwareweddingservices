@@ -1,0 +1,29 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral() // Sostituito jcenter() che è obsoleto
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+// --- FIX ISAR PER I NAMESPACE ---
+subprojects {
+    if (project.hasProperty('android')) {
+        project.android {
+            if (namespace == null) {
+                namespace = "com.example.wedding_flow.${project.name.replaceAll("-", "_")}"
+            }
+        }
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
