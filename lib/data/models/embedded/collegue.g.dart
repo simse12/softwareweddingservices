@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'collegue.dart';
+part of 'colleague.dart';
 
 // **************************************************************************
 // IsarEmbeddedGenerator

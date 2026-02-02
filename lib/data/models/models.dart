@@ -9,7 +9,7 @@ export 'embedded/partner.dart';
 export 'embedded/customer.dart';
 export 'embedded/address.dart';
 export 'embedded/service_item.dart';
-export 'embedded/collegue.dart'; // Attenzione al refuso: colleague?
+export 'embedded/colleague.dart'; // Attenzione al refuso: colleague?
 export 'embedded/media_management.dart';
 export 'embedded/timeline_step.dart';
 export 'embedded/task_checklist.dart';
